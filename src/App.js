@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./styles/App.css";
 import twitterLogo from "./assets/twitter-logo.svg";
+import openSeaLogo from "./assets/opean-sea.png";
 import { ethers } from "ethers";
 import contractAbi from "./utils/contractABI.json";
 
 // Constants
 const TWITTER_HANDLE = "SherlockVarm";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
+const OPEAN_SEA_LINK = `https://testnets.opensea.io/collection/varm-name-service`;
 const tld = ".varm";
 const CONTRACT_ADDRESS = "0xc3bfCe34affB6aBbD2C8BBbC0CC90cf0Bf118574";
 
@@ -201,14 +203,33 @@ const App = () => {
         {!currentAccount && renderNotConnectedContainer()}
         {currentAccount && renderInputForm()}
 
-        <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
-          <a
-            className="footer-text"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >{`built with @${TWITTER_HANDLE}`}</a>
+        <div>
+          <div className="footer-container">
+            <img
+              alt="Twitter Logo"
+              className="twitter-logo"
+              src={twitterLogo}
+            />
+            <a
+              className="footer-text"
+              href={TWITTER_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >{`built with @${TWITTER_HANDLE}`}</a>
+          </div>
+          <div className="footer-container">
+            <img
+              alt="Twitter Logo"
+              className="twitter-logo"
+              src={openSeaLogo}
+            />
+            <a
+              className="footer-text"
+              href={OPEAN_SEA_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >{`checkout on OpeanSea @VARM Name Service`}</a>
+          </div>
         </div>
       </div>
     </div>

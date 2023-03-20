@@ -148,11 +148,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
 }
+
+
+
 
 .twitter-logo {
   width: 35px;
+  padding-right: 10px;
   height: 35px;
 }
 
